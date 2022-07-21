@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+header{
+	border-bottom: 2px black solid;
+	display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+ul{
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+
+nav{
+   margin: 0 0 0 auto;
+}
+
+a{
+   text-decoration: none;
+}
+
+span{
+	font-size: 20px;
+}
+
+body{
+	text-align: center;
+}
+
+h3{
+	font-size: 20px;
+}
+
+.login{
+	padding:15px;
+}

@@ -17,22 +17,22 @@ import scopedata.u_Login;
 public class u_LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		RequestDispatcher dispatcher =
 				request.getRequestDispatcher("/WEB-INF/jsp/u_login.jsp");
 		dispatcher.forward(request, response);
-	
-	}	
+
+	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String path;
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String login_id = request.getParameter("login_id");
 		String pw = request.getParameter("pw");
 		HttpSession session = request.getSession();
 		u_Login login = new u_Login( login_id , pw );
 		session.setAttribute( "login" , login );
-		
+
 		u_LoginLogic bo = new u_LoginLogic( );
 		boolean r = bo.execute( login );
 		if( r == true ) {
