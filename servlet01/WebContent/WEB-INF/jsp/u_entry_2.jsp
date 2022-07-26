@@ -23,12 +23,13 @@
 	<h2>登録確認</h2>
 	<table align="center">
 		<tr>
-			<th>ログインID:</th> <td width="200"><%= account.getLogin_id() %></td>
+			<th>ログインID:</th> <td width="100"><%= account.getLogin_id() %></td>
 		</tr>
 	</table>
 	<br>
-	<a href="/servlet01/RegisterServlet">キャンセル</a>
+	<p>上記の内容で登録しますか？</p>
+	<a href="/servlet01/RegisterServlet?action=go" class="tou">登録</a>
 	&emsp;
-	<a href="/servlet01/RegisterServlet?action=go">登録する</a>
+	<a href="/servlet01/RegisterServlet">キャンセル</a>
 </body>
 </html>
