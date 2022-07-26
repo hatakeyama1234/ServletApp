@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import dao.RegisterDAO;
 import scopedata.U_account;
 
+@WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -31,7 +33,7 @@ public class RegisterServlet extends HttpServlet {
 			if(f==0)           //登録失敗時
 				path="WEB-INF/jsp/registerErr.jsp";
 			else               //登録成功時
-				path="WEB-INF/jsp/registerDone.jsp";
+				path="WEB-INF/jsp/u_entry_3.jsp";
 		}
 		RequestDispatcher dispatcher=request.getRequestDispatcher(path);
 		dispatcher.forward(request, response);
@@ -42,6 +44,8 @@ public class RegisterServlet extends HttpServlet {
 			request.setCharacterEncoding("UTF-8");
 			String login_id = request.getParameter("login_id");
 			String pw = request.getParameter("pw");
+			MakeHash mh = new MakeHash( pw );
+	        pw = mh.getHash();
 
 			HttpSession session = request.getSession();  //セッションスコープ取得
 			U_account account = new U_account (login_id,pw);

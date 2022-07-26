@@ -12,12 +12,12 @@
 		<span>ユーザ登録</span>
 		<nav>
 			<ul>
-				<li><a href="/servlet01/topmenu.html">トップメニューへ</a></li>
+				<li><a href="/servlet01/Topmenu">トップメニューへ</a></li>
 			</ul>
 		</nav>
 	</header>
 	<h3>ユーザ登録</h3>
-	<form action="/AccountManagement/RegisterServlet" method="post">
+	<form action="/servlet01/RegisterServlet" method="post">
 		<table align="center">
 			<tr>
 				<td width="150" class="login">ログインID</td>

@@ -11,10 +11,11 @@ public class RegisterDAO {
 	public int execute(U_account account) {
 		int f=0;
 		Connection con = null;
+
 		try {
 			Class.forName("org.h2.Driver");
-			con=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test","sa","");
-			String sql="insert into User values(?,?)";
+			con=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test","sa","tatu1927");
+			String sql="insert into uuser values(?,?)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, account.getLogin_id());
 			pstmt.setString(2, account.getPw());

@@ -10,7 +10,8 @@
 <body>
 	<h2>利用者ログイン</h2>
 	<a href="/servlet01/Topmenu">トップメニューへ</a><br><br>
-	<button class="button-1" role="button" onclick="location.href='/servlet01/listdisplay'">ユーザー登録はここから</button>
+	<button class="button-1" role="button" onclick="location.href='/servlet01/RegisterServlet'">ユーザー登録はここから</button>
+
 	<h1>利用者ログイン</h1>
 	<form action="/servlet01/u_LoginServlet" method="post">
 		ログインID&nbsp;:<input type = "text" name = "login_id"><br><br>

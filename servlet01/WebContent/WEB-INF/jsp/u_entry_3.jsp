@@ -5,12 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>登録完了</title>
+<link rel="stylesheet" href="css/u_register.css">
 </head>
 <body>
 	<header>
-		<h3>登録完了</h3>
-		<a href="/servlet/top.html">トップメニューへ</a>
+		<span>登録完了</span>
+		<nav>
+			<ul>
+				<li><a href="/servlet01/Topmenu">トップメニューへ</a></li>
+			</ul>
+		</nav>
 	</header>
-	<h3>登録が完了しました</h3>
+	<h1>登録が完了しました</h1>
 </body>
 </html>

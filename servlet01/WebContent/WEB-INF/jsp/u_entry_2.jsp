@@ -16,19 +16,19 @@
 		<span>登録確認</span>
 		<nav>
 			<ul>
-				<li><a href="/servlet01/topmenu.html">トップメニューへ</a></li>
+				<li><a href="/servlet01/Topmenu">トップメニューへ</a></li>
 			</ul>
 		</nav>
 	</header>
 	<h2>登録確認</h2>
-	<table>
+	<table align="center">
 		<tr>
 			<th>ログインID:</th> <td width="200"><%= account.getLogin_id() %></td>
 		</tr>
 	</table>
 	<br>
-	<a href="/AccountManagement/listdisplay">キャンセル</a>
+	<a href="/servlet01/RegisterServlet">キャンセル</a>
 	&emsp;
-	<a href="/AccountManagement/RegisterServlet?action=go">登録する</a>
+	<a href="/servlet01/RegisterServlet?action=go">登録する</a>
 </body>
 </html>
